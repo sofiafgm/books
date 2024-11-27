@@ -1,0 +1,34 @@
+<div class="container-fluid bg-dark min-vh-100 py-5">
+  <div class="container">
+    <h2 class="text-center text-light">Todos los libros</h2>
+    <table class="table table-bordered table-striped align-item-center">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Titulo</th>
+          <th scope="col">Autor</th>
+          <th scope="col">Año</th>
+          <th scope="col">Genero</th>
+          <th scope="col">Portada</th>
+          <th scope="col" class="text-end"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books">
+          <td class="align-middle">{{ book.title }}</td>
+          <td class="align-middle">{{ book.author }}</td>
+          <td class="align-middle">{{ book.year }}</td>
+          <td class="align-middle">{{ book.genre }}</td>
+          <td class="align-middle">{{ book.cover }}</td>
+          <td class="align-middle">
+            <button class="btn btn-dark" (click)="editBook(book)">
+              Editar
+            </button>
+            <button class="btn btn-outline-dark" (click)="deleteBook(book.id!)">
+              Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
