@@ -18,7 +18,11 @@
           <td class="align-middle">{{ book.author }}</td>
           <td class="align-middle">{{ book.year }}</td>
           <td class="align-middle">{{ book.genre }}</td>
-          <td class="align-middle">{{ book.cover }}</td>
+          <td class="align-middle">
+            <img [src]="book.cover" 
+            [alt]="book.title" 
+            class="rounded shadow-sm" 
+            width="50"></td>
           <td class="align-middle">
             <button class="btn btn-dark" (click)="editBook(book)">
               Editar
